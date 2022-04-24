@@ -6,10 +6,12 @@ xml_path = r"F:\origindata\outputs"
 img_path = r"F:\origindata"
 img_save_path = r"F:\imgdata"
 img_txt_filename = os.path.join(img_save_path, "img.txt")
+
 x = 1
 txt_file = open(img_txt_filename, "w")
 txt_file.write("1144\n")
 txt_file.write("filename x y w h\n")
+
 try:
     for filename in os.listdir(xml_path):
         tree = ET.parse(os.path.join(xml_path, filename))
